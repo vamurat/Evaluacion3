@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(163, 253, 253);
+}
+
+#portada{
+    height: 400px;
+    background-image: url("Portada1.jpg");
+    background-position: center;
+
+}
+
+.row{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+p{
+    color: black;
+}
+h5{
+    color: black;
+}
+
+h1{
+    color: rgb(28, 111, 144);
+}
+label{ color: rgb(28, 111, 144);
+    font: bold 120% monospace ;
+
+}
+
+th{
+    color: rgb(28, 111, 144);
+}

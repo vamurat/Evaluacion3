@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="mando.php">
+    <title>registro</title>
+  </head>
+  <body>
+    {%load static %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand"><img height="70px" src="{% static 'core/img/logo.png'%}" alt="logo"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#nosotros">Nosotros</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contacto">Contacto</a>
+					</li>
+					<li class="nav-item"> 
+						<a class="nav-link" href="/registro/">Registro</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+						  data-bs-toggle="dropdown" aria-expanded="false">
+						  Catalogo
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						  <li><a class="dropdown-item" href="/api/">Perros</a></li>
+						  <li><a class="dropdown-item" href="/api2/">Gatos</a></li>
+						  
+						  
+						</ul>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Productos
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<li><a class="dropdown-item" href="/correas/">Correas</a></li>
+							<li><a class="dropdown-item" href="/bandanas/">Bandanas</a></li>
+							<li><a class="dropdown-item" href="/identificadores/">Identificadores</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1 ">¡Registrate con nosotros!</h1>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputNombre" >Escriba su nombre</label>
+                    <input type="nombre" class="form-control" id="nombre" aria-describedby="nombreHelp"
+                        placeholder="Nombre completo">
+                    </div>
+                    <div class="form-check">
+                    </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" >Escriba su correo</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="nombre@empresa.com">
+                    </div>
+                    <div class="form-check">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" >Contraseña</label>
+                        <input id="pass1" type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Contraseña">
+                           
+                    </div>
+                    <div class="form-check">
+                    </div> 
+                    <div class="form-group">
+                        <label  for="exampleInputPassword1" >Confirme su contraseña</label>
+                        <input id="pass2" type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Confirme contraseña">
+                    </div>
+                    <div class="form-check">
+                    </div>
+                    <div class="form-check">
+                    </div>
+                    <button id="submitForm" type="submit" disabled class="btn btn-primary">Enviar</button>
+            </form>
+           
+
+        </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
+
+<script>
+    var Fn = {
+        // Valida el rut con su cadena completa "XXXXXXXX-X"
+        validaRut: function (rutCompleto) {
+            if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto))
+                return false;
+            var tmp = rutCompleto.split('-');
+            var digv = tmp[1];
+            var rut = tmp[0];
+            if (digv == 'K') digv = 'k';
+            return (Fn.dv(rut) == digv);
+        },
+        dv: function (T) {
+            var M = 0, S = 1;
+            for (; T; T = Math.floor(T / 10))
+                S = (S + T % 10 * (9 - M++ % 6)) % 11;
+            return S ? S - 1 : 'k';
+        }
+    }
+
+
+    
+    // Uso de la función
+    function todoOk() {
+        var oemail = $("#email").val()
+        var resultado = correoVerificar(oemail)
+        if ($("#nombre").val() != null || $("#pass1").val() != null || $("#pass2").val() != null || $("#email").val() != null) {
+                if($("#pass1").val() == $("#pass2").val() || resultado == true){
+                    $("#submitForm").prop('disabled', false);
+                } else {
+                    $("#submitForm").prop('disabled', true);
+                }
+        } else {
+            $("#submitForm").prop('disabled', true);
+        }
+
+    }
+
+
+     $("#pass2").change(function () {
+         if ($("#pass1").val() != $("#pass2").val()) {
+             alert("Las contraseñas no coinciden")
+             $("#pass2").removeClass("is-valid");
+             $("#pass2").addClass("is-invalid")
+         } else {
+             $("#pass2").removeClass("is-invalid");
+             $("#pass2").addClass("is-valid")
+             todoOk();
+         }
+
+     })
+
+    const email = false
+    function correoVerificar(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+    
+    $("#email").change(function () {
+        var oemail = $("#email").val()
+        var resultado = correoVerificar(oemail)
+        if (resultado == false) {
+            alert(oemail + " No es una direccion de correo Valida")
+            $("#email").removeClass("is-valid");
+            $("#email").addClass("is-invalid")
+        } else {
+            $("#email").removeClass("is-invalid");
+            $("#email").addClass("is-valid")
+        }
+    })
+
+
+</script>
